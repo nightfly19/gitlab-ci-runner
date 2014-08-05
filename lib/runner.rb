@@ -46,6 +46,7 @@ module GitlabCi
       end
 
       #Exit after completing a build successfully
+      puts "Should die now"
       Kernel.exit(0)
     end
 
