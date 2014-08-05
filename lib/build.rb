@@ -133,6 +133,8 @@ module GitlabCi
       # ENV
       # Bundler.with_clean_env now handles PATH, GEM_HOME, RUBYOPT & BUNDLE_*.
 
+      @process.environment['GIT_SSL_NO_VERIFY'] = 'true'
+
       @process.environment['CI_SERVER'] = 'yes'
       @process.environment['CI_SERVER_NAME'] = 'GitLab CI'
       @process.environment['CI_SERVER_VERSION'] = nil# GitlabCi::Version
