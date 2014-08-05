@@ -44,6 +44,9 @@ module GitlabCi
       else
         # wait when ci server will be online again to submit build results
       end
+
+      #Exit after completing a build successfully
+      Kernel.exit(0)
     end
 
     def push_build
